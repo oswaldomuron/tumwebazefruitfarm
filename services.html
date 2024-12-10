@@ -3,32 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - My Complex Website</title>
- <!-- Link to external stylesheet -->
+    <title>Services - Tumwebaze Fruitfarm</title>
+    <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Flexbox for Services Section */
+        #services-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin: 20px;
+        }
+        #services-section .text-content {
+            flex: 1; /* Takes up one-half of the section */
+            margin-right: 20px;
+        }
+        #services-section .image-content {
+            flex: 1; /* Takes up one-half of the section */
+            display: flex;
+            flex-wrap: wrap; /* Ensures images adjust if screen width is limited */
+            gap: 15px; /* Adds space between images */
+        }
+        #services-section .image-content figure {
+            flex: 1; /* Ensures figures are spaced evenly */
+            text-align: center; /* Centers the caption */
+            margin: 0;
+        }
+        #services-section .image-content img {
+            width: 100%;
+            border-radius: 5px; /* Optional: adds rounded corners to images */
+            transition: transform 0.2s ease; /* Smooth zoom effect on hover */
+        }
+        #services-section .image-content img:hover {
+            transform: scale(1.05); /* Slight zoom on hover */
+        }
+        #services-section .image-content figcaption {
+            text-align: center;
+            font-style: italic;
+            font-size: 0.9em;
+            color: gray;
+            margin-top: 5px;
+        }
+    </style>
 </head>
 <body>
     <header>
+        <!-- Inserting the circular logo -->
+        <img src="Images/Tumwebaze_Fruitfarm_logo.jpg" alt="Tumwebaze Fruitfarm Logo" class="logo">
         <h1>Our Services</h1>
         <p>Services we provide to our clients</p>
     </header>
     <nav>
         <a href="home.html">Home</a> |
-        <a href="about.html">About</a> |
+        <a href="location.html">Location</a> |
         <a href="services.html">Services</a> |
-        <a href="contact.html">Contact</a> |
-        <a href="kifidi.html">Kifidi</a>
+        <a href="contact.html">Contact</a>
     </nav>
-    <section>
-        <h2>Services</h2>
-        <ul>
-            <li>Web Design</li>
-            <li>Graphic Design</li>
-            <li>SEO Optimization</li>
-        </ul>
+    
+    <section id="services-section">
+        <!-- Left Column: Services List -->
+        <div class="text-content">
+            <h2>Services</h2>
+            <ul>
+                <li>
+                    Production and Sale of Fruit Tree Seedlings:
+                    <ul>
+                        <li>Mango Varieties</li>
+                        <li>Guava</li>
+                        <li>Apples</li>
+                        <li>Oranges</li>
+                        <li>Pawpaws</li>
+                        <li>Other citrus fruits (e.g., lemons, limes, tangerines)</li>
+                        <li>Passion Fruit</li>
+                    </ul>
+                </li>
+                <li>Fish pond construction</li>
+                <li>Yoghurt Production</li>
+                <li>Wine Production</li>
+            </ul>
+        </div>
+        
+        <!-- Right Column: Images -->
+        <div class="image-content">
+            <figure>
+                <a href="Images/mango-seedlings.jpg" target="_blank">
+                    <img src="Images/mango-seedlings.jpg" alt="Mango Seedlings">
+                </a>
+                <figcaption>Mango Seedlings</figcaption>
+            </figure>
+            <figure>
+                <a href="Images/Fish_pond_construction.jpg" target="_blank">
+                    <img src="Images/Fish_pond_construction.jpg" alt="Fish Pond Construction">
+                </a>
+                <figcaption>Fish Pond Construction</figcaption>
+            </figure>
+            <figure>
+                <a href="Images/Grape_wine.jpg" target="_blank">
+                    <img src="Images/Grape_wine.jpg" alt="Grape Wine Production">
+                </a>
+                <figcaption>Grape Wine Production</figcaption>
+            </figure>
+        </div>
     </section>
+
     <footer>
-        &copy; 2024 My Complex Website
+        &copy; 2024 Tumwebaze Fruitfarm. All Rights Reserved.
     </footer>
 </body>
 </html>
