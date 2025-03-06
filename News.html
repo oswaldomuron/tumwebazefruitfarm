@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - Tumwebaze Fruitfarm</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Optional: Include lightbox script (if you want to open images in a lightbox) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-lightbox/dist/simple-lightbox.min.css">
+    <style>
+        .news-article {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-left: 5px solid #34a853;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        
+        .news-article h2 {
+            color: #34a853;
+        }
+
+        .news-article p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #4b4b4b;
+        }
+
+        .news-article .date {
+            font-style: italic;
+            color: #777;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            font-size: 1.1em;
+            color: #34a853;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="Images/Tumwebaze_Fruitfarm_logo.jpg" alt="Tumwebaze Fruitfarm Logo" class="logo">
+        <h1>Latest News - Tumwebaze Fruitfarm</h1>
+    </header>
+    
+    <nav>
+        <a href="home.html">Home</a> |
+        <a href="location.html">Location</a> |
+        <a href="services.html">Services</a> |
+        <a href="contact.html">Contact</a> |
+        <a href="news.html">News</a> |
+    </nav>
+    
+    <section>
+        <div class="news-article">
+            <h2>New Mango Harvest Season Starts!</h2>
+            <p class="date">March 6, 2025</p>
+            <p>We are excited to announce the start of this year’s mango harvest season at Tumwebaze Fruitfarm! Our mangoes are known for their sweetness and freshness, and we can't wait to deliver them to your local markets. Stay tuned for more updates!</p>
+            <a href="home.html" class="back-link">Back to Home</a>
+        </div>
+        
+        <div class="news-article">
+            <h2>Fruit Farm Expansion Plans</h2>
+            <p class="date">February 15, 2025</p>
+            <p>As part of our growth strategy, we are expanding our farm to include new fruit varieties such as guavas and passion fruits. This expansion will help us meet the increasing demand for our products while maintaining our commitment to sustainable farming.</p>
+            <a href="home.html" class="back-link">Back to Home</a>
+        </div>
+
+        <div class="news-article">
+            <h2>Visit Tumwebaze Fruitfarm</h2>
+            <p class="date">January 25, 2025</p>
+            <p>If you're in the area, feel free to visit Tumwebaze Fruitfarm! We offer guided tours where you can see how we grow and harvest our delicious fruits. Join us and learn more about sustainable farming practices!</p>
+            <a href="home.html" class="back-link">Back to Home</a>
+        </div>
+    </section>
+    
+    <footer>
+        &copy; 2025 Tumwebaze Fruitfarm. All Rights Reserved.
+    </footer>
+
+    <!-- Optional: Include lightbox script for image modal functionality -->
+    <script src="https://cdn.jsdelivr.net/npm/simple-lightbox/dist/simple-lightbox.min.js"></script>
+    <script>
+        var lightbox = new SimpleLightbox('.image-gallery a');
+    </script>
+</body>
+</html>

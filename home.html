@@ -8,6 +8,62 @@
     <link rel="stylesheet" href="styles.css">
     <!-- Optional: Include lightbox script (if you want to open images in a lightbox) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-lightbox/dist/simple-lightbox.min.css">
+    <style>
+        /* Styles for the sliding popup */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+        }
+
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 100%; /* Start off-screen */
+            transform: translateY(-50%);
+            background: white;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+            text-align: center;
+            transition: left 0.5s ease-in-out;
+        }
+
+        .popup.show {
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .popup-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .close-btn {
+            cursor: pointer;
+            font-size: 20px;
+            color: red;
+        }
+
+        .news-link {
+            display: block;
+            margin-top: 10px;
+            text-decoration: none;
+            color: blue;
+            font-weight: bold;
+        }
+
+        .news-link:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -19,7 +75,8 @@
         <a href="home.html">Home</a> |
         <a href="location.html">Location</a> |
         <a href="services.html">Services</a> |
-        <a href="contact.html">Contact</a>
+        <a href="contact.html">Contact</a> |
+        <a href="news.html">News</a> |
     </nav>
     <section>
         <h2>Tumwebaze Fruitfarm</h2>
@@ -36,23 +93,46 @@
             Our goal at Tumwebaze Fruitfarm is to provide fresh, high-quality fruits while maintaining sustainable farming practices that benefit both our community and the environment.
         </p>
 
-<!-- Right Column: Image -->
-<div class="image-content" style="text-align: center;">
-    <figure>
-        <a href="Images/Mango_trees.jpg" target="_blank">
-            <img src="Images/Mango_trees.jpg" alt="Nature’s sweetness: Mangoes growing on the tree at Tumwebaze Fruitfarm" style="width: 80%;  height: auto;">
-        </a>
-        <figcaption>Mangoes growing on the tree at Tumwebaze Fruitfarm.</figcaption>
-    </figure>
-</div>
-
-
-
-
+        <!-- Right Column: Image -->
+        <div class="image-content" style="text-align: center;">
+            <figure>
+                <a href="Images/Mango_trees.jpg" target="_blank">
+                    <img src="Images/Mango_trees.jpg" alt="Nature’s sweetness: Mangoes growing on the tree at Tumwebaze Fruitfarm" style="width: 80%; height: auto;">
+                </a>
+                <figcaption>Mangoes growing on the tree at Tumwebaze Fruitfarm.</figcaption>
+            </figure>
+        </div>
     </section>
+    
     <footer>
         &copy; 2025 Tumwebaze Fruitfarm. All Rights Reserved.
     </footer>
+
+    <!-- News Pop-up -->
+    <div class="overlay" id="overlay"></div>
+    <div class="popup" id="popup">
+        <div class="popup-header">
+            <span>Latest News</span>
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+        </div>
+        <p>Stay updated with the latest news and events happening now at Tumwebaze Fruitfarm!</p>
+        <a href="news.html" class="news-link" target="_blank">Read More</a>
+    </div>
+
+    <!-- JavaScript for Popup -->
+    <script>
+        window.onload = function() {
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('popup').classList.add('show');
+        };
+
+        function closePopup() {
+            document.getElementById('popup').classList.remove('show');
+            setTimeout(() => {
+                document.getElementById('overlay').style.display = 'none';
+            }, 500); // Wait for animation to finish
+        }
+    </script>
 
     <!-- Optional: Include lightbox script for image modal functionality -->
     <script src="https://cdn.jsdelivr.net/npm/simple-lightbox/dist/simple-lightbox.min.js"></script>
